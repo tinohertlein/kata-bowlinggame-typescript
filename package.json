@@ -1,0 +1,33 @@
+{
+  "name": "kata-bowling-typescript",
+  "version": "1.0.0",
+  "description": "This repository contains code for the Bowling Game Kata - in TypeScript",
+  "author": "Tino Hertlein",
+  "homepage": "https://github.com/tinohertlein/kata-bowlinggame-typescript#readme",
+  "scripts": {
+    "lint": "eslint ./src --ext .ts",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest",
+    "test:watch": "jest --watch --"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.0",
+    "@types/deep-equal": "1.0.1",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "chai": "^4.3.6",
+    "deep-equal": "^2.0.5",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.6.2",
+    "jest-mock-extended": "^2.0.5",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.7.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.2"
+  }
+}
