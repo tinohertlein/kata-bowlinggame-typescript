@@ -24,12 +24,12 @@ Your task is to develop a calculator for bowling games.
 
 Write a class `Game` that has two methods:
 
-* `roll(pins: number)`  is called each time the player rolls a ball. The argument is the number of pins knocked down.
+* `roll(pins: number): void`  is called each time the player rolls a ball. The argument is the number of pins knocked down.
 * `score(): number` returns the total score for that game.
 
 ### Examples
 
-When scoring “X” indicates a strike, “/” indicates a spare, “-” indicates a miss
+When scoring, “X” indicates a strike, “/” indicates a spare, “-” indicates a miss
 
 * X X X X X X X X X X X X (12 rolls: 12 strikes) = 10 frames * 30 points = 300
 * 9- 9- 9- 9- 9- 9- 9- 9- 9- 9- (20 rolls: 10 pairs of 9 and miss) = 10 frames * 9 points = 90
