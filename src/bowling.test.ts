@@ -50,4 +50,29 @@ describe('Game should', () => {
             expect(game.score()).toEqual(150)
         })
     })
+
+    describe('handle strikes', () => {
+        test('returning score if strike happens in first frame', () => {
+            doRolls(1, 10)
+            doRolls(1, 5)
+            doRolls(17, 0)
+
+            expect(game.score()).toEqual(20)
+        })
+
+        test('returning score if strike happens in last frame', () => {
+            doRolls(18, 0)
+            doRolls(1, 10)
+            doRolls(1, 5)
+            doRolls(1, 5)
+
+            expect(game.score()).toEqual(20)
+        })
+
+        test('returning score if only strikes happen', () => {
+            doRolls(12, 10)
+
+            expect(game.score()).toEqual(300)
+        })
+    })
 })
