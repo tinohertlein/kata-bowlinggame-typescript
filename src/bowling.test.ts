@@ -24,4 +24,30 @@ describe('Game should', () => {
 
         expect(game.score()).toEqual(20)
     })
+
+    describe('handle spares', () => {
+        test('returning score if spare happens in first frame', () => {
+            doRolls(1, 5)
+            doRolls(1, 5)
+            doRolls(1, 5)
+            doRolls(17, 0)
+
+            expect(game.score()).toEqual(20)
+        })
+
+        test('returning score if spare happens in last frame', () => {
+            doRolls(18, 0)
+            doRolls(1, 5)
+            doRolls(1, 5)
+            doRolls(1, 5)
+
+            expect(game.score()).toEqual(15)
+        })
+
+        test('returning score if only spares happen', () => {
+            doRolls(21, 5)
+
+            expect(game.score()).toEqual(150)
+        })
+    })
 })
